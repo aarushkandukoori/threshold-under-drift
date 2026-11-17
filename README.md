@@ -1,11 +1,12 @@
 # threshold-under-drift
 
 When normal data shifts, should you move the alarm threshold, and how? This is a small, reproducible
-test of fixed and adaptive thresholds on the scores of one frozen anomaly detector. It follows the
-order Aditi Gautam suggested: first check whether the scores still separate normal from anomalous
-after the shift, then compare thresholds on the same frozen model, with updates that only see the past.
+test of fixed and adaptive thresholds on the scores of one frozen anomaly detector. The order is:
+first check whether the scores still separate normal from anomalous after the shift, then compare
+thresholds on the same frozen model, with updates that only see the past.
 
 Everything runs in about 2 minutes on a laptop CPU. It is a small prototype, not a benchmark.
+A 4-page write-up is in [note/threshold-under-drift.pdf](note/threshold-under-drift.pdf).
 
 ![Recover fast vs absorb a sustained anomaly](results/fig3_recover_vs_absorb.png)
 
