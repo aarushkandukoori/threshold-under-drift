@@ -1,0 +1,13 @@
+,,auroc_before,auroc_before,auroc_after,auroc_after
+,,mean,std,mean,std
+scenario,detector,,,,
+control,iforest,0.9739,0.008,0.9719,0.008
+control,knn,0.9825,0.0087,0.9791,0.005
+gradual,iforest,0.9739,0.008,0.8641,0.0263
+gradual,knn,0.9825,0.0087,0.8984,0.021
+recurring,iforest,0.9739,0.008,0.8512,0.0226
+recurring,knn,0.9825,0.0087,0.8838,0.0213
+sudden,iforest,0.9739,0.008,0.8593,0.0175
+sudden,knn,0.9825,0.0087,0.896,0.0136
+sustained,iforest,0.9733,0.0071,0.8611,0.0117
+sustained,knn,0.9806,0.0064,0.8622,0.0067

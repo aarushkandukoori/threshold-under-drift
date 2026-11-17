@@ -1,0 +1,21 @@
+detector,policy,fa,recall
+iforest,fixed,0.2117,0.0721
+iforest,rolling-200,0.0315,0.0019
+iforest,rolling-500,0.0309,0.0039
+iforest,rolling-1000,0.0319,0.0032
+iforest,SCS-style,0.0195,0.0013
+iforest,MACS-style,0.0172,0.0006
+iforest,SCS-style (paper k=1.8),0.0455,0.0156
+iforest,MACS-style (paper k=1.8),0.0467,0.0058
+iforest,"confirmed-normal-500, labels 50 late",0.0323,0.0039
+iforest,"confirmed-normal-500, labels 200 late",0.039,0.0065
+knn,fixed,0.8741,0.8747
+knn,rolling-200,0.0325,0.0091
+knn,rolling-500,0.0319,0.0104
+knn,rolling-1000,0.0341,0.0117
+knn,SCS-style,0.0421,0.0273
+knn,MACS-style,0.0611,0.0227
+knn,SCS-style (paper k=1.8),0.0225,0.0104
+knn,MACS-style (paper k=1.8),0.0386,0.0104
+knn,"confirmed-normal-500, labels 50 late",0.0352,0.013
+knn,"confirmed-normal-500, labels 200 late",0.0454,0.0195

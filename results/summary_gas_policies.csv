@@ -1,0 +1,181 @@
+detector,policy,batch,fa,recall
+iforest,fixed,2,0.0555,0.0
+iforest,rolling-200,2,0.0328,0.0
+iforest,rolling-500,2,0.0315,0.0
+iforest,rolling-1000,2,0.0312,0.0
+iforest,SCS-style,2,0.0271,0.0
+iforest,MACS-style,2,0.0254,0.0
+iforest,SCS-style (paper k=1.8),2,0.053,0.0
+iforest,MACS-style (paper k=1.8),2,0.0507,0.0
+iforest,"confirmed-normal-500, labels 50 late",2,0.033,0.0
+iforest,"confirmed-normal-500, labels 200 late",2,0.0377,0.0
+iforest,fixed,3,0.4146,0.0
+iforest,rolling-200,3,0.0361,0.0
+iforest,rolling-500,3,0.0394,0.0
+iforest,rolling-1000,3,0.0507,0.0
+iforest,SCS-style,3,0.0101,0.0
+iforest,MACS-style,3,0.0053,0.0
+iforest,SCS-style (paper k=1.8),3,0.0291,0.0
+iforest,MACS-style (paper k=1.8),3,0.0205,0.0
+iforest,"confirmed-normal-500, labels 50 late",3,0.0446,0.0
+iforest,"confirmed-normal-500, labels 200 late",3,0.067,0.0
+iforest,fixed,4,0.7053,0.2
+iforest,rolling-200,4,0.0779,0.0
+iforest,rolling-500,4,0.0992,0.0
+iforest,rolling-1000,4,0.1115,0.0
+iforest,SCS-style,4,0.0,0.0
+iforest,MACS-style,4,0.0,0.0
+iforest,SCS-style (paper k=1.8),4,0.026,0.0
+iforest,MACS-style (paper k=1.8),4,0.0046,0.0
+iforest,"confirmed-normal-500, labels 50 late",4,0.113,0.0
+iforest,"confirmed-normal-500, labels 200 late",4,0.1206,0.0
+iforest,fixed,5,0.3722,0.04
+iforest,rolling-200,5,0.0291,0.0
+iforest,rolling-500,5,0.0331,0.0
+iforest,rolling-1000,5,0.0358,0.0
+iforest,SCS-style,5,0.0066,0.0
+iforest,MACS-style,5,0.0106,0.0
+iforest,SCS-style (paper k=1.8),5,0.0252,0.0
+iforest,MACS-style (paper k=1.8),5,0.0305,0.0
+iforest,"confirmed-normal-500, labels 50 late",5,0.0331,0.0
+iforest,"confirmed-normal-500, labels 200 late",5,0.0477,0.0
+iforest,fixed,6,0.131,0.0069
+iforest,rolling-200,6,0.0275,0.0
+iforest,rolling-500,6,0.0218,0.0
+iforest,rolling-1000,6,0.0169,0.0
+iforest,SCS-style,6,0.0001,0.0
+iforest,MACS-style,6,0.0121,0.0
+iforest,SCS-style (paper k=1.8),6,0.0043,0.0
+iforest,MACS-style (paper k=1.8),6,0.0184,0.0
+iforest,"confirmed-normal-500, labels 50 late",6,0.0203,0.0
+iforest,"confirmed-normal-500, labels 200 late",6,0.0179,0.0
+iforest,fixed,7,0.2227,0.0488
+iforest,rolling-200,7,0.0309,0.0
+iforest,rolling-500,7,0.0296,0.0
+iforest,rolling-1000,7,0.03,0.0
+iforest,SCS-style,7,0.0002,0.0
+iforest,MACS-style,7,0.0102,0.0
+iforest,SCS-style (paper k=1.8),7,0.0191,0.0
+iforest,MACS-style (paper k=1.8),7,0.0606,0.0
+iforest,"confirmed-normal-500, labels 50 late",7,0.0291,0.0
+iforest,"confirmed-normal-500, labels 200 late",7,0.0335,0.0
+iforest,fixed,8,0.036,0.0
+iforest,rolling-200,8,0.0153,0.0
+iforest,rolling-500,8,0.0038,0.0
+iforest,rolling-1000,8,0.0038,0.0
+iforest,SCS-style,8,0.0015,0.0
+iforest,MACS-style,8,0.0061,0.0
+iforest,SCS-style (paper k=1.8),8,0.0038,0.0
+iforest,MACS-style (paper k=1.8),8,0.0084,0.0
+iforest,"confirmed-normal-500, labels 50 late",8,0.0038,0.0
+iforest,"confirmed-normal-500, labels 200 late",8,0.0038,0.0
+iforest,fixed,9,0.0142,0.0
+iforest,rolling-200,9,0.0182,0.0
+iforest,rolling-500,9,0.0056,0.0
+iforest,rolling-1000,9,0.001,0.0
+iforest,SCS-style,9,0.0,0.0
+iforest,MACS-style,9,0.002,0.0
+iforest,SCS-style (paper k=1.8),9,0.001,0.0
+iforest,MACS-style (paper k=1.8),9,0.002,0.0
+iforest,"confirmed-normal-500, labels 50 late",9,0.0041,0.0
+iforest,"confirmed-normal-500, labels 200 late",9,0.001,0.0
+iforest,fixed,10,0.2421,0.1867
+iforest,rolling-200,10,0.0338,0.0067
+iforest,rolling-500,10,0.0378,0.0133
+iforest,rolling-1000,10,0.0399,0.0111
+iforest,SCS-style,10,0.0597,0.0044
+iforest,MACS-style,10,0.0342,0.0022
+iforest,SCS-style (paper k=1.8),10,0.1179,0.0533
+iforest,MACS-style (paper k=1.8),10,0.0769,0.02
+iforest,"confirmed-normal-500, labels 50 late",10,0.0415,0.0133
+iforest,"confirmed-normal-500, labels 200 late",10,0.0521,0.0222
+knn,fixed,2,0.4437,0.5824
+knn,rolling-200,2,0.0375,0.0059
+knn,rolling-500,2,0.0372,0.0059
+knn,rolling-1000,2,0.0389,0.0059
+knn,SCS-style,2,0.0356,0.0059
+knn,MACS-style,2,0.0326,0.0059
+knn,SCS-style (paper k=1.8),2,0.0307,0.0
+knn,MACS-style (paper k=1.8),2,0.0285,0.0
+knn,"confirmed-normal-500, labels 50 late",2,0.0576,0.0235
+knn,"confirmed-normal-500, labels 200 late",2,0.1064,0.0588
+knn,fixed,3,0.8686,0.61
+knn,rolling-200,3,0.0343,0.0
+knn,rolling-500,3,0.0285,0.0
+knn,rolling-1000,3,0.0281,0.0
+knn,SCS-style,3,0.0171,0.0
+knn,MACS-style,3,0.0224,0.0
+knn,SCS-style (paper k=1.8),3,0.0111,0.0
+knn,MACS-style (paper k=1.8),3,0.0171,0.0
+knn,"confirmed-normal-500, labels 50 late",3,0.0269,0.0
+knn,"confirmed-normal-500, labels 200 late",3,0.0312,0.0
+knn,fixed,4,0.9634,0.85
+knn,rolling-200,4,0.1008,0.2
+knn,rolling-500,4,0.1771,0.2
+knn,rolling-1000,4,0.226,0.2
+knn,SCS-style,4,0.2107,0.2
+knn,MACS-style,4,0.1786,0.2
+knn,SCS-style (paper k=1.8),4,0.2107,0.2
+knn,MACS-style (paper k=1.8),4,0.1664,0.2
+knn,"confirmed-normal-500, labels 50 late",4,0.2519,0.2
+knn,"confirmed-normal-500, labels 200 late",4,0.3267,0.2
+knn,fixed,5,0.9735,0.8
+knn,rolling-200,5,0.0,0.0
+knn,rolling-500,5,0.0,0.0
+knn,rolling-1000,5,0.0013,0.0
+knn,SCS-style,5,0.0053,0.0
+knn,MACS-style,5,0.0238,0.0
+knn,SCS-style (paper k=1.8),5,0.0053,0.0
+knn,MACS-style (paper k=1.8),5,0.0172,0.0
+knn,"confirmed-normal-500, labels 50 late",5,0.0,0.0
+knn,"confirmed-normal-500, labels 200 late",5,0.0596,0.0
+knn,fixed,6,0.9492,0.9793
+knn,rolling-200,6,0.0278,0.0
+knn,rolling-500,6,0.0215,0.0
+knn,rolling-1000,6,0.0165,0.0
+knn,SCS-style,6,0.0097,0.0
+knn,MACS-style,6,0.0653,0.0
+knn,SCS-style (paper k=1.8),6,0.0007,0.0
+knn,MACS-style (paper k=1.8),6,0.0292,0.0
+knn,"confirmed-normal-500, labels 50 late",6,0.0203,0.0
+knn,"confirmed-normal-500, labels 200 late",6,0.0194,0.0
+knn,fixed,7,0.9792,1.0
+knn,rolling-200,7,0.0307,0.007
+knn,rolling-500,7,0.0298,0.0093
+knn,rolling-1000,7,0.0301,0.0093
+knn,SCS-style,7,0.033,0.014
+knn,MACS-style,7,0.0696,0.0372
+knn,SCS-style (paper k=1.8),7,0.0082,0.0
+knn,MACS-style (paper k=1.8),7,0.0413,0.014
+knn,"confirmed-normal-500, labels 50 late",7,0.0294,0.0116
+knn,"confirmed-normal-500, labels 200 late",7,0.0316,0.0093
+knn,fixed,8,0.9931,1.0
+knn,rolling-200,8,0.0575,0.0
+knn,rolling-500,8,0.0812,0.0
+knn,rolling-1000,8,0.0958,0.0
+knn,SCS-style,8,0.105,0.05
+knn,MACS-style,8,0.1556,0.05
+knn,SCS-style (paper k=1.8),8,0.023,0.0
+knn,MACS-style (paper k=1.8),8,0.105,0.0
+knn,"confirmed-normal-500, labels 50 late",8,0.0973,0.0
+knn,"confirmed-normal-500, labels 200 late",8,0.1326,0.0
+knn,fixed,9,0.9473,1.0
+knn,rolling-200,9,0.0223,0.0
+knn,rolling-500,9,0.0157,0.0
+knn,rolling-1000,9,0.0268,0.0
+knn,SCS-style,9,0.0648,0.0
+knn,MACS-style,9,0.0866,0.0
+knn,SCS-style (paper k=1.8),9,0.0051,0.0
+knn,MACS-style (paper k=1.8),9,0.0542,0.0
+knn,"confirmed-normal-500, labels 50 late",9,0.0187,0.0
+knn,"confirmed-normal-500, labels 200 late",9,0.0314,0.0
+knn,fixed,10,0.8532,0.9267
+knn,rolling-200,10,0.0327,0.0133
+knn,rolling-500,10,0.0345,0.0156
+knn,rolling-1000,10,0.0411,0.02
+knn,SCS-style,10,0.0751,0.0644
+knn,MACS-style,10,0.063,0.0267
+knn,SCS-style (paper k=1.8),10,0.0497,0.0267
+knn,MACS-style (paper k=1.8),10,0.0443,0.0133
+knn,"confirmed-normal-500, labels 50 late",10,0.0364,0.0156
+knn,"confirmed-normal-500, labels 200 late",10,0.0429,0.0267

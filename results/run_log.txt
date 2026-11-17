@@ -1,0 +1,14 @@
+gas data ready
+control done (12s)
+sudden done (24s)
+gradual done (35s)
+recurring done (48s)
+sustained done (60s)
+gas seed 0 done (63s)
+gas seed 1 done (66s)
+gas seed 2 done (68s)
+gas seed 3 done (71s)
+gas seed 4 done (73s)
+all done in 73s
+summaries and figures written
+Done. See results/.
