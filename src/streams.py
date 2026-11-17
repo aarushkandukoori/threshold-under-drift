@@ -41,7 +41,7 @@ def synthetic(kind, seed):
     kind = control | sudden | gradual | recurring | sustained.
     'sustained' keeps normal data still and inserts a 1,000-point anomaly block at
     t = 4000..4999 that looks exactly like the sudden shift (same direction, same size),
-    but is labeled anomalous. That is the case Aditi called the tricky part.
+    but is labeled anomalous. It tests whether an adaptive rule absorbs a sustained anomaly.
     """
     rng = np.random.default_rng(seed)
     direction = rng.normal(size=D)
