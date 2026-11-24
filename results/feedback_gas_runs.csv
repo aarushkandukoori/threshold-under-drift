@@ -1,0 +1,101 @@
+stream,seed,detector,policy,fa,recall
+gas,0,iforest,fixed,0.317761,0.149351
+gas,0,iforest,rolling-200,0.0311446,0.00324675
+gas,0,iforest,rolling-500,0.0307985,0.00324675
+gas,0,iforest,rolling-1000,0.0317502,0
+gas,0,iforest,SCS-style,0.0242235,0.00324675
+gas,0,iforest,MACS-style,0.027511,0.00324675
+gas,0,iforest,every label returns,0.0341725,0.00649351
+gas,0,iforest,no ticket = normal,0.0338265,0.00649351
+gas,0,iforest,raise on confirmed false alarms,0.03746,0.00324675
+gas,0,iforest,roll back on confirmed incidents,0.0307985,0.00324675
+gas,0,knn,fixed,0.959166,0.996753
+gas,0,knn,rolling-200,0.0319232,0.0162338
+gas,0,knn,rolling-500,0.0315771,0.0162338
+gas,0,knn,rolling-1000,0.0332209,0.0194805
+gas,0,knn,SCS-style,0.098711,0.0844156
+gas,0,knn,MACS-style,0.111255,0.0649351
+gas,0,knn,every label returns,0.0358162,0.0194805
+gas,0,knn,no ticket = normal,0.0397093,0.0292208
+gas,0,knn,raise on confirmed false alarms,0.0441215,0.0292208
+gas,0,knn,roll back on confirmed incidents,0.0315771,0.0162338
+gas,1,iforest,fixed,0.208149,0.0487013
+gas,1,iforest,rolling-200,0.0315771,0
+gas,1,iforest,rolling-500,0.0301064,0
+gas,1,iforest,rolling-1000,0.0312311,0
+gas,1,iforest,SCS-style,0.0174756,0
+gas,1,iforest,MACS-style,0.0146206,0
+gas,1,iforest,every label returns,0.0347781,0.00324675
+gas,1,iforest,no ticket = normal,0.0350376,0
+gas,1,iforest,raise on confirmed false alarms,0.0375465,0
+gas,1,iforest,roll back on confirmed incidents,0.0301064,0
+gas,1,knn,fixed,0.920581,0.944805
+gas,1,knn,rolling-200,0.0320097,0.00649351
+gas,1,knn,rolling-500,0.0316636,0.00649351
+gas,1,knn,rolling-1000,0.0334804,0.00974026
+gas,1,knn,SCS-style,0.0463708,0.0194805
+gas,1,knn,MACS-style,0.0915304,0.0292208
+gas,1,knn,every label returns,0.037287,0.00974026
+gas,1,knn,no ticket = normal,0.0404879,0.00974026
+gas,1,knn,raise on confirmed false alarms,0.0356432,0.00649351
+gas,1,knn,roll back on confirmed incidents,0.0316636,0.00649351
+gas,2,iforest,fixed,0.270698,0.0551948
+gas,2,iforest,rolling-200,0.0337399,0
+gas,2,iforest,rolling-500,0.0326153,0
+gas,2,iforest,rolling-1000,0.0322692,0
+gas,2,iforest,SCS-style,0.0265594,0
+gas,2,iforest,MACS-style,0.027338,0
+gas,2,iforest,every label returns,0.0371139,0
+gas,2,iforest,no ticket = normal,0.0387577,0
+gas,2,iforest,raise on confirmed false alarms,0.0372004,0
+gas,2,iforest,roll back on confirmed incidents,0.0326153,0
+gas,2,knn,fixed,0.904317,0.827922
+gas,2,knn,rolling-200,0.033913,0.00324675
+gas,2,knn,rolling-500,0.0321827,0.00324675
+gas,2,knn,rolling-1000,0.0347781,0
+gas,2,knn,SCS-style,0.0145341,0
+gas,2,knn,MACS-style,0.0190328,0
+gas,2,knn,every label returns,0.0349511,0
+gas,2,knn,no ticket = normal,0.0395363,0
+gas,2,knn,raise on confirmed false alarms,0.0362488,0.00324675
+gas,2,knn,roll back on confirmed incidents,0.0321827,0.00324675
+gas,3,iforest,fixed,0.158837,0.0487013
+gas,3,iforest,rolling-200,0.0319232,0.00649351
+gas,3,iforest,rolling-500,0.030712,0.00649351
+gas,3,iforest,rolling-1000,0.0319232,0.00649351
+gas,3,iforest,SCS-style,0.0161779,0.00324675
+gas,3,iforest,MACS-style,0.0113332,0
+gas,3,iforest,every label returns,0.0323557,0.00974026
+gas,3,iforest,no ticket = normal,0.033913,0.00974026
+gas,3,iforest,raise on confirmed false alarms,0.0351241,0.00649351
+gas,3,iforest,roll back on confirmed incidents,0.030712,0.00649351
+gas,3,knn,fixed,0.952245,0.977273
+gas,3,knn,rolling-200,0.0325288,0.012987
+gas,3,knn,rolling-500,0.0324423,0.0162338
+gas,3,knn,rolling-1000,0.0356432,0.0162338
+gas,3,knn,SCS-style,0.0304525,0.0227273
+gas,3,knn,MACS-style,0.0337399,0.00974026
+gas,3,knn,every label returns,0.03746,0.0162338
+gas,3,knn,no ticket = normal,0.0399689,0.0292208
+gas,3,knn,raise on confirmed false alarms,0.0409205,0.0227273
+gas,3,knn,roll back on confirmed incidents,0.0324423,0.0162338
+gas,4,iforest,fixed,0.103123,0.0584416
+gas,4,iforest,rolling-200,0.0290683,0
+gas,4,iforest,rolling-500,0.0304525,0.00974026
+gas,4,iforest,rolling-1000,0.0325288,0.00974026
+gas,4,iforest,SCS-style,0.0131499,0
+gas,4,iforest,MACS-style,0.00536379,0
+gas,4,iforest,every label returns,0.0357297,0.00974026
+gas,4,iforest,no ticket = normal,0.0352972,0.00974026
+gas,4,iforest,raise on confirmed false alarms,0.0343455,0.00974026
+gas,4,iforest,roll back on confirmed incidents,0.0304525,0.00974026
+gas,4,knn,fixed,0.634224,0.626623
+gas,4,knn,rolling-200,0.0320097,0.00649351
+gas,4,knn,rolling-500,0.0318367,0.00974026
+gas,4,knn,rolling-1000,0.0335669,0.012987
+gas,4,knn,SCS-style,0.0205035,0.00974026
+gas,4,knn,MACS-style,0.0499178,0.00974026
+gas,4,knn,every label returns,0.0371139,0.0162338
+gas,4,knn,no ticket = normal,0.0368544,0.0162338
+gas,4,knn,raise on confirmed false alarms,0.0357297,0.00974026
+gas,4,knn,roll back on confirmed incidents,0.0318367,0.00974026

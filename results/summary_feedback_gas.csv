@@ -1,0 +1,21 @@
+detector,policy,fa,recall
+iforest,fixed,0.2117,0.0721
+iforest,rolling-200,0.0315,0.0019
+iforest,rolling-500,0.0309,0.0039
+iforest,rolling-1000,0.0319,0.0032
+iforest,SCS-style,0.0195,0.0013
+iforest,MACS-style,0.0172,0.0006
+iforest,every label returns,0.0348,0.0058
+iforest,no ticket = normal,0.0354,0.0052
+iforest,raise on confirmed false alarms,0.0363,0.0039
+iforest,roll back on confirmed incidents,0.0309,0.0039
+knn,fixed,0.8741,0.8747
+knn,rolling-200,0.0325,0.0091
+knn,rolling-500,0.0319,0.0104
+knn,rolling-1000,0.0341,0.0117
+knn,SCS-style,0.0421,0.0273
+knn,MACS-style,0.0611,0.0227
+knn,every label returns,0.0365,0.0123
+knn,no ticket = normal,0.0393,0.0169
+knn,raise on confirmed false alarms,0.0385,0.0143
+knn,roll back on confirmed incidents,0.0319,0.0104
