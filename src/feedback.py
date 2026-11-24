@@ -41,8 +41,10 @@ Rules (each decides on point t from the past only)
                           it drops back to the lowest threshold at which one of those
                           incidents fired, and stays there until fewer than 5 of the last
                           10 are incidents.
-The settings (500 points and 3x budget for the first rule; last 10 labels, 8 must agree
-for the second) were picked once and not tuned.
+Settings were set by hand. For raise_on_false_alarms, an earlier gate and a 2x bar let the
+cap creep up during normal running on 4 of the 10 seeds, so it uses the 500-point estimate
+with a 3x bar. Last 10 labels with 8 agreeing (rollback_on_incidents) was picked once.
+Nothing else was tuned.
 """
 import bisect
 from collections import deque

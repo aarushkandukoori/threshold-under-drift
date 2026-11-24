@@ -147,7 +147,9 @@ in `src/summarize_feedback.py`.
 | raise on confirmed false alarms | checked alerts | threshold = the lower of the rolling-500 proposal and a cap. The cap starts at the fixed threshold. It rises to the proposal only when a checked alert comes back as a false positive and the checked alerts from the 500 points before it put the false-alarm rate above 3x the budget (alarms x share of returned labels that were false). Silence never raises it, and the threshold can always come down |
 | roll back on confirmed incidents | checked alerts | follows rolling-500. When 8 of the last 10 returned labels are confirmed incidents, it drops back to the lowest threshold at which one of them fired, and holds until fewer than 5 of the last 10 are incidents |
 
-These settings (500 points, 3x budget, 8 of 10) were picked once and not tuned.
+These settings were set by hand. The false-alarm rule was adjusted once on 4 of the 10 seeds: an
+earlier gate and a 2x bar let its cap creep up during normal running, so it uses the 3x bar. The
+500 points and the 8 of 10 were picked once. Nothing else was tuned.
 
 **Results at the reference setting** (frozen Isolation Forest, mean over 10 seeds, ± is a 95% interval;
 `results/summary_feedback_ref.csv`)
