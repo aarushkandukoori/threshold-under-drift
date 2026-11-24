@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# One command: download the gas data, run every stream, rebuild tables and figures (about 2 minutes on a laptop CPU).
+# One command: download the gas data, run every stream, rebuild tables and figures.
+# The first test takes about 2 minutes on a laptop CPU; the delay and feedback sweep a few
+# more minutes with 4 worker processes (set WORKERS to change that).
 set -euo pipefail
 cd "$(dirname "$0")"
 python3 -c "import numpy, pandas, scipy, sklearn, matplotlib" 2>/dev/null || {
@@ -7,4 +9,6 @@ python3 -c "import numpy, pandas, scipy, sklearn, matplotlib" 2>/dev/null || {
 python3 src/download_data.py
 python3 src/run_all.py
 python3 src/summarize.py
+python3 src/run_feedback.py
+python3 src/summarize_feedback.py
 echo "Done. See results/."

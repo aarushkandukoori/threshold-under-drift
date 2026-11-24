@@ -32,6 +32,12 @@ def fixed(cal, s):
 def rolling_quantile(cal, s, window):
     """Threshold = 97.5% quantile of the last `window` scores (calibration scores fill
     the history at the start)."""
+    return s > rolling_threshold(cal, s, window)
+
+
+def rolling_threshold(cal, s, window):
+    """The threshold path behind `rolling_quantile`: for each stream point t, the 97.5%
+    quantile of the `window` scores before t."""
     hist = np.concatenate([cal, s])
     n, T = len(cal), len(s)
     # window for stream point t covers hist[n + t - window : n + t]
@@ -43,7 +49,7 @@ def rolling_quantile(cal, s, window):
     if t_full < T:
         wins = sliding_window_view(hist[n + t_full - window: n + T - 1], window)
         thr[t_full:] = np.quantile(wins, Q, axis=1)
-    return s > thr
+    return thr
 
 
 def rolling_confirmed_normal(cal, s, y, window, delay):
@@ -51,7 +57,11 @@ def rolling_confirmed_normal(cal, s, y, window, delay):
     threshold is the 97.5% quantile of the last `window` scores whose label has come back
     as normal (calibration rows count as normal). Recent, still-unlabeled points are not
     used at all, so a sustained anomaly cannot leak into the baseline, but a real new
-    normal is only picked up `delay` points late."""
+    normal is only picked up `delay` points late.
+
+    Assumes full coverage: every point's true label comes back, whether or not it raised
+    an alarm. Real tickets do not give that. src/feedback.py drops this assumption (labels
+    only for checked alerts, delays drawn per point)."""
     n, T = len(cal), len(s)
     hist = np.concatenate([cal, s])
     is_normal = np.concatenate([np.ones(n, bool), y == 0])

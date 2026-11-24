@@ -18,13 +18,14 @@ ANOM_OFFSET = 4.5  # how far a point anomaly sits from the current normal mean
 N_FIT, N_CAL = 2000, 1000
 
 
-def shift_profile(kind, t=np.arange(T)):
-    """How far the normal mean has moved at each time, from 0 (start) to 1 (fully shifted)."""
+def shift_profile(kind, t=np.arange(T), ramp=1500):
+    """How far the normal mean has moved at each time, from 0 (start) to 1 (fully shifted).
+    `ramp` is the length of the gradual move in points (1,500 in the first note)."""
     m = np.zeros(len(t))
     if kind == "sudden":
         m[t >= T0] = 1.0
     elif kind == "gradual":
-        m = np.clip((t - T0) / 1500.0, 0.0, 1.0)      # linear ramp over 1,500 points
+        m = np.clip((t - T0) / float(ramp), 0.0, 1.0)  # linear ramp over `ramp` points
     elif kind == "recurring":
         for start in (2000, 4000, 6000):              # on for 1,000 points, off for 1,000
             m[(t >= start) & (t < start + 1000)] = 1.0
@@ -35,10 +36,11 @@ def shift_profile(kind, t=np.arange(T)):
     return m
 
 
-def synthetic(kind, seed):
+def synthetic(kind, seed, ramp=1500):
     """Gaussian normal data whose mean moves along one direction.
 
     kind = control | sudden | gradual | recurring | sustained.
+    `ramp` sets how many points the gradual move takes (only used when kind = gradual).
     'sustained' keeps normal data still and inserts a 1,000-point anomaly block at
     t = 4000..4999 that looks exactly like the sudden shift (same direction, same size),
     but is labeled anomalous. It tests whether an adaptive rule absorbs a sustained anomaly.
@@ -50,7 +52,7 @@ def synthetic(kind, seed):
     cal = rng.normal(size=(N_CAL, D))
 
     t = np.arange(T)
-    m = shift_profile(kind, t)
+    m = shift_profile(kind, t, ramp)
     mean = np.outer(m * SHIFT, direction)
     X = mean + rng.normal(size=(T, D))
     y = np.zeros(T, dtype=int)
