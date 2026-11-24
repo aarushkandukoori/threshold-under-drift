@@ -175,7 +175,12 @@ def raise_on_false_alarms(cal, s, y, delay, capacity, window=WINDOW, recent=RECE
     false-alarm rate over the `recent` points up to i:
         (alarms in those points) x (share of their returned labels that are false) / points
     If at least MIN_LABELS labels from those points are back and the estimate is above
-    `factor` x budget, raise the cap to the proposal at point i."""
+    `factor` x budget, raise the cap to the proposal at point i.
+
+    Known weak spot: the estimate treats the returned labels as a fair sample of all
+    alarms. When checks run out during a burst of incidents, the labels back right after
+    the burst over-count false alarms, so the cap can go up just after a sustained anomaly
+    ends (n_raised in results/feedback_runs.csv). The cap never comes back down."""
     T = len(s)
     prop = rolling_threshold(cal, s, window)
     cap = float(np.quantile(cal, Q))         # start at the fixed threshold

@@ -120,7 +120,7 @@ place (2.7% and 2.3% recall). Once separation is gone, no threshold rule gets it
 
 The confirmed-normal rule above gets every point's true label after a fixed delay, whether or not
 the point raised an alarm. Real feedback has two problems that rule ignores. Turnaround varies, and
-a confirmed incident gives an anomaly label while no ticket does not show that a point was normal.
+only alerts that someone checks come back with a label, so a point with no ticket has no label at all.
 This part tests both. Code in `src/feedback.py`, runs in `src/run_feedback.py`, tables and figures
 in `src/summarize_feedback.py`.
 
@@ -173,12 +173,14 @@ What it shows:
   gets a ticket.
 - Raising the threshold only on confirmed false alarms missed exactly the same share of the block as
   the fixed threshold in all 190 runs (19 delay and capacity settings x 10 seeds), and it still
-  recovered from the real shift. With no shift it behaves like the fixed threshold.
+  recovered from the real shift. With no shift it behaves like the fixed threshold. It has a weak
+  spot right after the anomaly (see the limits below).
 - Rolling back on confirmed incidents flips the trade. It recovers in about 300 to 350 points at
   every delay, but its misses grow with the delay: 68% at a median of 10 points, 82% at 800 (steady delays).
 - Delay mostly costs recovery, and how much depends on how fast the stream drifts
-  ([figure 6](results/fig6_delay_vs_drift_speed.png)). With steady 200-point delays, the false-alarm
-  rule had 22.5% false alarms during a sudden shift, 12.8% during a drift over 500 points and 5.9%
+  ([figure 6](results/fig6_delay_vs_drift_speed.png)). With steady delays, going from a 10-point to
+  a 200-point median raised the false-alarm rule's false alarms from 11.4% to 22.5% in the 500 points
+  after a sudden shift, from 7.4% to 12.8% during a drift over 500 points and from 5.2% to 5.9%
   during a drift over 2,000 points (fixed: 38.0%, 25.9% and 17.5%).
 - Heavy tails help a rule that needs only a few labels. At a median delay of 800 points it recovered
   in 496 points with heavy-tailed delays and in 895 with steady ones.
@@ -194,8 +196,11 @@ What it shows:
 
 - The false-alarm rule lets false alarms climb to about 3x the budget before it moves. On the slow
   drift it ran at about 5% false alarms even with short delays, against 2.5% for rolling-500.
-- It remembers levels it has approved, so a later anomaly that looks like an earlier confirmed new
-  normal would be absorbed. That case is not tested here.
+- Its false-alarm estimate treats checked alerts as a fair sample of all alarms. Checks run out
+  during the sustained anomaly, so right after it the returned labels over-count false alarms and the
+  cap goes up: in 96 of the 190 runs (4 of 10 seeds at the reference setting, 1 of 10 with every
+  alert checked; column `n_raised` in `results/feedback_runs.csv`). The cap never comes back down, so
+  a second anomaly like the first would likely be missed more. That case is not tested here.
 - Labels are always right, delays do not depend on the alert, and checks are first come, first served.
 
 ## Run it
