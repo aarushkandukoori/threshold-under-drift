@@ -1,0 +1,13 @@
+stream,detector,runs,flags_min,flags_max,runs_without_flag,runs_with_one_flag_per_change,start_error_max,start_error_median,flag_lag_max,flag_lag_median
+no shift,iforest,30,0,0,30,,,,,
+sudden,iforest,30,1,1,0,30.0,8.0,0.5,43.0,26.0
+sustained anomaly,iforest,30,2,2,0,30.0,17.0,1.0,44.0,30.0
+two anomalies,iforest,30,4,4,0,30.0,17.0,1.0,44.0,30.0
+drift over 500,iforest,30,0,1,1,,,,,
+drift over 2000,iforest,30,0,1,28,,,,,
+no shift,knn,30,0,1,29,,,,,
+sudden,knn,30,1,1,0,30.0,8.0,1.0,45.0,26.0
+sustained anomaly,knn,30,2,3,0,29.0,568.0,1.0,48.0,31.0
+two anomalies,knn,30,4,5,0,29.0,568.0,1.0,54.0,31.0
+drift over 500,knn,30,1,2,0,,,,,
+drift over 2000,knn,30,0,1,28,,,,,

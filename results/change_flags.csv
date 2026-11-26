@@ -1,0 +1,607 @@
+stream,seed,detector,flagged_at,start
+no shift,0,iforest,,
+no shift,1,iforest,,
+no shift,2,iforest,,
+no shift,3,iforest,,
+no shift,4,iforest,,
+no shift,5,iforest,,
+no shift,6,iforest,,
+no shift,7,iforest,,
+no shift,8,iforest,,
+no shift,9,iforest,,
+no shift,10,iforest,,
+no shift,11,iforest,,
+no shift,12,iforest,,
+no shift,13,iforest,,
+no shift,14,iforest,,
+no shift,15,iforest,,
+no shift,16,iforest,,
+no shift,17,iforest,,
+no shift,18,iforest,,
+no shift,19,iforest,,
+no shift,20,iforest,,
+no shift,21,iforest,,
+no shift,22,iforest,,
+no shift,23,iforest,,
+no shift,24,iforest,,
+no shift,25,iforest,,
+no shift,26,iforest,,
+no shift,27,iforest,,
+no shift,28,iforest,,
+no shift,29,iforest,,
+sudden,0,iforest,2022.0,2001.0
+sudden,1,iforest,2026.0,2000.0
+sudden,2,iforest,2043.0,2005.0
+sudden,3,iforest,2032.0,2000.0
+sudden,4,iforest,2038.0,2000.0
+sudden,5,iforest,2026.0,1998.0
+sudden,6,iforest,2027.0,2001.0
+sudden,7,iforest,2032.0,2000.0
+sudden,8,iforest,2023.0,1999.0
+sudden,9,iforest,2019.0,2000.0
+sudden,10,iforest,2028.0,1998.0
+sudden,11,iforest,2023.0,2000.0
+sudden,12,iforest,2025.0,2000.0
+sudden,13,iforest,2016.0,1992.0
+sudden,14,iforest,2038.0,1999.0
+sudden,15,iforest,2030.0,1999.0
+sudden,16,iforest,2031.0,2000.0
+sudden,17,iforest,2036.0,2003.0
+sudden,18,iforest,2023.0,2000.0
+sudden,19,iforest,2030.0,2000.0
+sudden,20,iforest,2035.0,2000.0
+sudden,21,iforest,2027.0,2000.0
+sudden,22,iforest,2028.0,2000.0
+sudden,23,iforest,2026.0,2000.0
+sudden,24,iforest,2024.0,2000.0
+sudden,25,iforest,2026.0,1999.0
+sudden,26,iforest,2026.0,2001.0
+sudden,27,iforest,2024.0,1997.0
+sudden,28,iforest,2026.0,1999.0
+sudden,29,iforest,2025.0,1995.0
+sustained anomaly,0,iforest,4023.0,3999.0
+sustained anomaly,0,iforest,5026.0,5000.0
+sustained anomaly,1,iforest,4023.0,4000.0
+sustained anomaly,1,iforest,5037.0,4999.0
+sustained anomaly,2,iforest,4021.0,4001.0
+sustained anomaly,2,iforest,5036.0,5000.0
+sustained anomaly,3,iforest,4042.0,4004.0
+sustained anomaly,3,iforest,5037.0,5001.0
+sustained anomaly,4,iforest,4033.0,4002.0
+sustained anomaly,4,iforest,5033.0,4999.0
+sustained anomaly,5,iforest,4022.0,4002.0
+sustained anomaly,5,iforest,5033.0,5000.0
+sustained anomaly,6,iforest,4028.0,4000.0
+sustained anomaly,6,iforest,5042.0,5015.0
+sustained anomaly,7,iforest,4026.0,3997.0
+sustained anomaly,7,iforest,5044.0,5001.0
+sustained anomaly,8,iforest,4030.0,4001.0
+sustained anomaly,8,iforest,5031.0,4999.0
+sustained anomaly,9,iforest,4024.0,4000.0
+sustained anomaly,9,iforest,5027.0,5000.0
+sustained anomaly,10,iforest,4031.0,4000.0
+sustained anomaly,10,iforest,5031.0,5001.0
+sustained anomaly,11,iforest,4031.0,3999.0
+sustained anomaly,11,iforest,5032.0,5002.0
+sustained anomaly,12,iforest,4028.0,4000.0
+sustained anomaly,12,iforest,5037.0,5003.0
+sustained anomaly,13,iforest,4030.0,4001.0
+sustained anomaly,13,iforest,5030.0,4983.0
+sustained anomaly,14,iforest,4026.0,4005.0
+sustained anomaly,14,iforest,5036.0,4999.0
+sustained anomaly,15,iforest,4032.0,3997.0
+sustained anomaly,15,iforest,5030.0,5003.0
+sustained anomaly,16,iforest,4025.0,4000.0
+sustained anomaly,16,iforest,5027.0,5000.0
+sustained anomaly,17,iforest,4028.0,4001.0
+sustained anomaly,17,iforest,5035.0,4996.0
+sustained anomaly,18,iforest,4027.0,4001.0
+sustained anomaly,18,iforest,5030.0,4999.0
+sustained anomaly,19,iforest,4029.0,4000.0
+sustained anomaly,19,iforest,5031.0,5000.0
+sustained anomaly,20,iforest,4032.0,4000.0
+sustained anomaly,20,iforest,5029.0,5000.0
+sustained anomaly,21,iforest,4026.0,3997.0
+sustained anomaly,21,iforest,5034.0,4998.0
+sustained anomaly,22,iforest,4024.0,4000.0
+sustained anomaly,22,iforest,5029.0,5004.0
+sustained anomaly,23,iforest,4034.0,4003.0
+sustained anomaly,23,iforest,5022.0,4990.0
+sustained anomaly,24,iforest,4031.0,4000.0
+sustained anomaly,24,iforest,5032.0,5001.0
+sustained anomaly,25,iforest,4031.0,3994.0
+sustained anomaly,25,iforest,5039.0,5007.0
+sustained anomaly,26,iforest,4034.0,3997.0
+sustained anomaly,26,iforest,5033.0,5000.0
+sustained anomaly,27,iforest,4026.0,4000.0
+sustained anomaly,27,iforest,5034.0,5000.0
+sustained anomaly,28,iforest,4021.0,4000.0
+sustained anomaly,28,iforest,5011.0,5000.0
+sustained anomaly,29,iforest,4026.0,4001.0
+sustained anomaly,29,iforest,5030.0,5000.0
+two anomalies,0,iforest,4023.0,3999.0
+two anomalies,0,iforest,5026.0,5000.0
+two anomalies,0,iforest,6025.0,5999.0
+two anomalies,0,iforest,7028.0,7000.0
+two anomalies,1,iforest,4023.0,4000.0
+two anomalies,1,iforest,5037.0,4999.0
+two anomalies,1,iforest,6038.0,6002.0
+two anomalies,1,iforest,7035.0,7005.0
+two anomalies,2,iforest,4021.0,4001.0
+two anomalies,2,iforest,5036.0,5000.0
+two anomalies,2,iforest,6021.0,6002.0
+two anomalies,2,iforest,7034.0,7000.0
+two anomalies,3,iforest,4042.0,4004.0
+two anomalies,3,iforest,5037.0,5001.0
+two anomalies,3,iforest,6035.0,6000.0
+two anomalies,3,iforest,7041.0,7000.0
+two anomalies,4,iforest,4033.0,4002.0
+two anomalies,4,iforest,5033.0,4999.0
+two anomalies,4,iforest,6019.0,5999.0
+two anomalies,4,iforest,7037.0,7000.0
+two anomalies,5,iforest,4022.0,4002.0
+two anomalies,5,iforest,5033.0,5000.0
+two anomalies,5,iforest,6030.0,6001.0
+two anomalies,5,iforest,7028.0,7001.0
+two anomalies,6,iforest,4028.0,4000.0
+two anomalies,6,iforest,5042.0,5015.0
+two anomalies,6,iforest,6034.0,6002.0
+two anomalies,6,iforest,7030.0,7001.0
+two anomalies,7,iforest,4026.0,3997.0
+two anomalies,7,iforest,5044.0,5001.0
+two anomalies,7,iforest,6029.0,6002.0
+two anomalies,7,iforest,7038.0,7000.0
+two anomalies,8,iforest,4030.0,4001.0
+two anomalies,8,iforest,5031.0,4999.0
+two anomalies,8,iforest,6022.0,6002.0
+two anomalies,8,iforest,7032.0,6999.0
+two anomalies,9,iforest,4024.0,4000.0
+two anomalies,9,iforest,5027.0,5000.0
+two anomalies,9,iforest,6022.0,6006.0
+two anomalies,9,iforest,7033.0,6999.0
+two anomalies,10,iforest,4031.0,4000.0
+two anomalies,10,iforest,5031.0,5001.0
+two anomalies,10,iforest,6028.0,6000.0
+two anomalies,10,iforest,7029.0,7000.0
+two anomalies,11,iforest,4031.0,3999.0
+two anomalies,11,iforest,5032.0,5002.0
+two anomalies,11,iforest,6031.0,6000.0
+two anomalies,11,iforest,7028.0,6999.0
+two anomalies,12,iforest,4028.0,4000.0
+two anomalies,12,iforest,5037.0,5003.0
+two anomalies,12,iforest,6026.0,6001.0
+two anomalies,12,iforest,7028.0,6996.0
+two anomalies,13,iforest,4030.0,4001.0
+two anomalies,13,iforest,5030.0,4983.0
+two anomalies,13,iforest,6032.0,5999.0
+two anomalies,13,iforest,7040.0,7005.0
+two anomalies,14,iforest,4026.0,4005.0
+two anomalies,14,iforest,5036.0,4999.0
+two anomalies,14,iforest,6020.0,6000.0
+two anomalies,14,iforest,7033.0,7002.0
+two anomalies,15,iforest,4032.0,3997.0
+two anomalies,15,iforest,5030.0,5003.0
+two anomalies,15,iforest,6030.0,6001.0
+two anomalies,15,iforest,7034.0,7000.0
+two anomalies,16,iforest,4025.0,4000.0
+two anomalies,16,iforest,5027.0,5000.0
+two anomalies,16,iforest,6026.0,6000.0
+two anomalies,16,iforest,7031.0,7000.0
+two anomalies,17,iforest,4028.0,4001.0
+two anomalies,17,iforest,5035.0,4996.0
+two anomalies,17,iforest,6024.0,6000.0
+two anomalies,17,iforest,7027.0,7001.0
+two anomalies,18,iforest,4027.0,4001.0
+two anomalies,18,iforest,5030.0,4999.0
+two anomalies,18,iforest,6032.0,6000.0
+two anomalies,18,iforest,7026.0,6998.0
+two anomalies,19,iforest,4029.0,4000.0
+two anomalies,19,iforest,5031.0,5000.0
+two anomalies,19,iforest,6028.0,6002.0
+two anomalies,19,iforest,7035.0,6999.0
+two anomalies,20,iforest,4032.0,4000.0
+two anomalies,20,iforest,5029.0,5000.0
+two anomalies,20,iforest,6029.0,6003.0
+two anomalies,20,iforest,7035.0,7001.0
+two anomalies,21,iforest,4026.0,3997.0
+two anomalies,21,iforest,5034.0,4998.0
+two anomalies,21,iforest,6027.0,6000.0
+two anomalies,21,iforest,7036.0,7000.0
+two anomalies,22,iforest,4024.0,4000.0
+two anomalies,22,iforest,5029.0,5004.0
+two anomalies,22,iforest,6039.0,6000.0
+two anomalies,22,iforest,7040.0,7000.0
+two anomalies,23,iforest,4034.0,4003.0
+two anomalies,23,iforest,5022.0,4990.0
+two anomalies,23,iforest,6025.0,6002.0
+two anomalies,23,iforest,7031.0,7001.0
+two anomalies,24,iforest,4031.0,4000.0
+two anomalies,24,iforest,5032.0,5001.0
+two anomalies,24,iforest,6024.0,5996.0
+two anomalies,24,iforest,7022.0,7000.0
+two anomalies,25,iforest,4031.0,3994.0
+two anomalies,25,iforest,5039.0,5007.0
+two anomalies,25,iforest,6035.0,6002.0
+two anomalies,25,iforest,7033.0,7000.0
+two anomalies,26,iforest,4034.0,3997.0
+two anomalies,26,iforest,5033.0,5000.0
+two anomalies,26,iforest,6035.0,6009.0
+two anomalies,26,iforest,7036.0,7004.0
+two anomalies,27,iforest,4026.0,4000.0
+two anomalies,27,iforest,5034.0,5000.0
+two anomalies,27,iforest,6022.0,6000.0
+two anomalies,27,iforest,7035.0,6997.0
+two anomalies,28,iforest,4021.0,4000.0
+two anomalies,28,iforest,5011.0,5000.0
+two anomalies,28,iforest,6028.0,6000.0
+two anomalies,28,iforest,7031.0,6999.0
+two anomalies,29,iforest,4026.0,4001.0
+two anomalies,29,iforest,5030.0,5000.0
+two anomalies,29,iforest,6029.0,6004.0
+two anomalies,29,iforest,7029.0,7000.0
+drift over 500,0,iforest,2373.0,2267.0
+drift over 500,1,iforest,2484.0,2298.0
+drift over 500,2,iforest,2442.0,2335.0
+drift over 500,3,iforest,2368.0,2328.0
+drift over 500,4,iforest,,
+drift over 500,5,iforest,2450.0,2253.0
+drift over 500,6,iforest,2418.0,2375.0
+drift over 500,7,iforest,2326.0,2177.0
+drift over 500,8,iforest,2368.0,2201.0
+drift over 500,9,iforest,2504.0,2282.0
+drift over 500,10,iforest,2387.0,2146.0
+drift over 500,11,iforest,2410.0,2220.0
+drift over 500,12,iforest,2350.0,2272.0
+drift over 500,13,iforest,2503.0,2356.0
+drift over 500,14,iforest,2483.0,2356.0
+drift over 500,15,iforest,2356.0,2240.0
+drift over 500,16,iforest,2274.0,2168.0
+drift over 500,17,iforest,2525.0,2220.0
+drift over 500,18,iforest,2303.0,2217.0
+drift over 500,19,iforest,2576.0,2210.0
+drift over 500,20,iforest,2425.0,2281.0
+drift over 500,21,iforest,2517.0,2319.0
+drift over 500,22,iforest,2431.0,2306.0
+drift over 500,23,iforest,2373.0,2259.0
+drift over 500,24,iforest,2469.0,2233.0
+drift over 500,25,iforest,2262.0,2223.0
+drift over 500,26,iforest,2479.0,2344.0
+drift over 500,27,iforest,2392.0,2244.0
+drift over 500,28,iforest,2376.0,2182.0
+drift over 500,29,iforest,2486.0,2283.0
+drift over 2000,0,iforest,,
+drift over 2000,1,iforest,,
+drift over 2000,2,iforest,,
+drift over 2000,3,iforest,,
+drift over 2000,4,iforest,,
+drift over 2000,5,iforest,,
+drift over 2000,6,iforest,,
+drift over 2000,7,iforest,,
+drift over 2000,8,iforest,,
+drift over 2000,9,iforest,,
+drift over 2000,10,iforest,,
+drift over 2000,11,iforest,,
+drift over 2000,12,iforest,,
+drift over 2000,13,iforest,,
+drift over 2000,14,iforest,,
+drift over 2000,15,iforest,,
+drift over 2000,16,iforest,2931.0,2881.0
+drift over 2000,17,iforest,,
+drift over 2000,18,iforest,,
+drift over 2000,19,iforest,,
+drift over 2000,20,iforest,,
+drift over 2000,21,iforest,3474.0,3432.0
+drift over 2000,22,iforest,,
+drift over 2000,23,iforest,,
+drift over 2000,24,iforest,,
+drift over 2000,25,iforest,,
+drift over 2000,26,iforest,,
+drift over 2000,27,iforest,,
+drift over 2000,28,iforest,,
+drift over 2000,29,iforest,,
+no shift,0,knn,,
+no shift,1,knn,,
+no shift,2,knn,,
+no shift,3,knn,,
+no shift,4,knn,,
+no shift,5,knn,,
+no shift,6,knn,,
+no shift,7,knn,,
+no shift,8,knn,,
+no shift,9,knn,,
+no shift,10,knn,,
+no shift,11,knn,,
+no shift,12,knn,,
+no shift,13,knn,,
+no shift,14,knn,,
+no shift,15,knn,,
+no shift,16,knn,,
+no shift,17,knn,,
+no shift,18,knn,,
+no shift,19,knn,,
+no shift,20,knn,,
+no shift,21,knn,3474.0,3432.0
+no shift,22,knn,,
+no shift,23,knn,,
+no shift,24,knn,,
+no shift,25,knn,,
+no shift,26,knn,,
+no shift,27,knn,,
+no shift,28,knn,,
+no shift,29,knn,,
+sudden,0,knn,2028.0,2001.0
+sudden,1,knn,2028.0,2000.0
+sudden,2,knn,2045.0,2005.0
+sudden,3,knn,2026.0,2000.0
+sudden,4,knn,2032.0,2000.0
+sudden,5,knn,2022.0,1998.0
+sudden,6,knn,2024.0,2001.0
+sudden,7,knn,2030.0,2000.0
+sudden,8,knn,2020.0,1999.0
+sudden,9,knn,2013.0,2000.0
+sudden,10,knn,2025.0,1998.0
+sudden,11,knn,2021.0,2000.0
+sudden,12,knn,2025.0,2002.0
+sudden,13,knn,2017.0,1997.0
+sudden,14,knn,2031.0,2004.0
+sudden,15,knn,2031.0,2000.0
+sudden,16,knn,2038.0,2000.0
+sudden,17,knn,2036.0,2003.0
+sudden,18,knn,2023.0,2000.0
+sudden,19,knn,2024.0,2000.0
+sudden,20,knn,2037.0,2000.0
+sudden,21,knn,2026.0,2002.0
+sudden,22,knn,2028.0,2000.0
+sudden,23,knn,2020.0,2000.0
+sudden,24,knn,2022.0,1992.0
+sudden,25,knn,2025.0,2000.0
+sudden,26,knn,2019.0,2001.0
+sudden,27,knn,2026.0,1999.0
+sudden,28,knn,2027.0,1999.0
+sudden,29,knn,2027.0,1995.0
+sustained anomaly,0,knn,4017.0,3999.0
+sustained anomaly,0,knn,5045.0,5000.0
+sustained anomaly,1,knn,4023.0,4000.0
+sustained anomaly,1,knn,5042.0,4999.0
+sustained anomaly,2,knn,4024.0,4001.0
+sustained anomaly,2,knn,5042.0,5000.0
+sustained anomaly,3,knn,4043.0,4004.0
+sustained anomaly,3,knn,5039.0,5001.0
+sustained anomaly,4,knn,4030.0,4002.0
+sustained anomaly,4,knn,5035.0,4999.0
+sustained anomaly,5,knn,4021.0,4002.0
+sustained anomaly,5,knn,5040.0,4999.0
+sustained anomaly,6,knn,4023.0,4000.0
+sustained anomaly,6,knn,5046.0,5005.0
+sustained anomaly,7,knn,4025.0,3997.0
+sustained anomaly,7,knn,5048.0,4998.0
+sustained anomaly,8,knn,4026.0,4001.0
+sustained anomaly,8,knn,5034.0,4999.0
+sustained anomaly,9,knn,4023.0,4005.0
+sustained anomaly,9,knn,5032.0,5000.0
+sustained anomaly,10,knn,4031.0,4000.0
+sustained anomaly,10,knn,5035.0,5001.0
+sustained anomaly,11,knn,4030.0,3999.0
+sustained anomaly,11,knn,5042.0,5001.0
+sustained anomaly,12,knn,4027.0,4000.0
+sustained anomaly,12,knn,5044.0,5003.0
+sustained anomaly,13,knn,4023.0,4001.0
+sustained anomaly,13,knn,5033.0,4975.0
+sustained anomaly,14,knn,4022.0,4005.0
+sustained anomaly,14,knn,5039.0,4999.0
+sustained anomaly,15,knn,4024.0,3997.0
+sustained anomaly,15,knn,5037.0,5003.0
+sustained anomaly,16,knn,4028.0,4000.0
+sustained anomaly,16,knn,5031.0,5000.0
+sustained anomaly,17,knn,4026.0,4002.0
+sustained anomaly,17,knn,5036.0,4996.0
+sustained anomaly,18,knn,4034.0,4001.0
+sustained anomaly,18,knn,5037.0,4999.0
+sustained anomaly,19,knn,4025.0,4000.0
+sustained anomaly,19,knn,5037.0,5000.0
+sustained anomaly,20,knn,4033.0,4002.0
+sustained anomaly,20,knn,5030.0,5000.0
+sustained anomaly,21,knn,3474.0,3432.0
+sustained anomaly,21,knn,4027.0,3997.0
+sustained anomaly,21,knn,5034.0,4998.0
+sustained anomaly,22,knn,4029.0,4000.0
+sustained anomaly,22,knn,5035.0,5004.0
+sustained anomaly,23,knn,4034.0,4000.0
+sustained anomaly,23,knn,5027.0,4990.0
+sustained anomaly,24,knn,4030.0,4000.0
+sustained anomaly,24,knn,5037.0,5000.0
+sustained anomaly,25,knn,4020.0,4000.0
+sustained anomaly,25,knn,5047.0,5007.0
+sustained anomaly,26,knn,4030.0,4000.0
+sustained anomaly,26,knn,5038.0,5000.0
+sustained anomaly,27,knn,4025.0,4000.0
+sustained anomaly,27,knn,5036.0,5000.0
+sustained anomaly,28,knn,4021.0,3993.0
+sustained anomaly,28,knn,5022.0,4973.0
+sustained anomaly,29,knn,4031.0,4001.0
+sustained anomaly,29,knn,5033.0,5000.0
+two anomalies,0,knn,4017.0,3999.0
+two anomalies,0,knn,5045.0,5000.0
+two anomalies,0,knn,6025.0,5999.0
+two anomalies,0,knn,7044.0,7000.0
+two anomalies,1,knn,4023.0,4000.0
+two anomalies,1,knn,5042.0,4999.0
+two anomalies,1,knn,6037.0,6002.0
+two anomalies,1,knn,7054.0,7000.0
+two anomalies,2,knn,4024.0,4001.0
+two anomalies,2,knn,5042.0,5000.0
+two anomalies,2,knn,6023.0,6002.0
+two anomalies,2,knn,7041.0,7000.0
+two anomalies,3,knn,4043.0,4004.0
+two anomalies,3,knn,5039.0,5001.0
+two anomalies,3,knn,6025.0,6000.0
+two anomalies,3,knn,7041.0,7000.0
+two anomalies,4,knn,4030.0,4002.0
+two anomalies,4,knn,5035.0,4999.0
+two anomalies,4,knn,6015.0,6002.0
+two anomalies,4,knn,7039.0,7000.0
+two anomalies,5,knn,4021.0,4002.0
+two anomalies,5,knn,5040.0,4999.0
+two anomalies,5,knn,6029.0,6001.0
+two anomalies,5,knn,7037.0,7000.0
+two anomalies,6,knn,4023.0,4000.0
+two anomalies,6,knn,5046.0,5005.0
+two anomalies,6,knn,6028.0,6002.0
+two anomalies,6,knn,7031.0,7001.0
+two anomalies,7,knn,4025.0,3997.0
+two anomalies,7,knn,5048.0,4998.0
+two anomalies,7,knn,6034.0,6002.0
+two anomalies,7,knn,7047.0,7000.0
+two anomalies,8,knn,4026.0,4001.0
+two anomalies,8,knn,5034.0,4999.0
+two anomalies,8,knn,6017.0,6004.0
+two anomalies,8,knn,7034.0,6999.0
+two anomalies,9,knn,4023.0,4005.0
+two anomalies,9,knn,5032.0,5000.0
+two anomalies,9,knn,6018.0,6004.0
+two anomalies,9,knn,7041.0,6999.0
+two anomalies,10,knn,4031.0,4000.0
+two anomalies,10,knn,5035.0,5001.0
+two anomalies,10,knn,6028.0,6000.0
+two anomalies,10,knn,7035.0,6999.0
+two anomalies,11,knn,4030.0,3999.0
+two anomalies,11,knn,5042.0,5001.0
+two anomalies,11,knn,6031.0,6000.0
+two anomalies,11,knn,7031.0,6999.0
+two anomalies,12,knn,4027.0,4000.0
+two anomalies,12,knn,5044.0,5003.0
+two anomalies,12,knn,6027.0,6001.0
+two anomalies,12,knn,7033.0,6995.0
+two anomalies,13,knn,4023.0,4001.0
+two anomalies,13,knn,5033.0,4975.0
+two anomalies,13,knn,6027.0,5999.0
+two anomalies,13,knn,7041.0,7005.0
+two anomalies,14,knn,4022.0,4005.0
+two anomalies,14,knn,5039.0,4999.0
+two anomalies,14,knn,6018.0,6000.0
+two anomalies,14,knn,7038.0,7000.0
+two anomalies,15,knn,4024.0,3997.0
+two anomalies,15,knn,5037.0,5003.0
+two anomalies,15,knn,6030.0,5998.0
+two anomalies,15,knn,7040.0,7000.0
+two anomalies,16,knn,4028.0,4000.0
+two anomalies,16,knn,5031.0,5000.0
+two anomalies,16,knn,6026.0,6000.0
+two anomalies,16,knn,7035.0,7000.0
+two anomalies,17,knn,4026.0,4002.0
+two anomalies,17,knn,5036.0,4996.0
+two anomalies,17,knn,6020.0,6000.0
+two anomalies,17,knn,7031.0,7001.0
+two anomalies,18,knn,4034.0,4001.0
+two anomalies,18,knn,5037.0,4999.0
+two anomalies,18,knn,6031.0,6000.0
+two anomalies,18,knn,7035.0,6998.0
+two anomalies,19,knn,4025.0,4000.0
+two anomalies,19,knn,5037.0,5000.0
+two anomalies,19,knn,6026.0,6002.0
+two anomalies,19,knn,7035.0,6999.0
+two anomalies,20,knn,4033.0,4002.0
+two anomalies,20,knn,5030.0,5000.0
+two anomalies,20,knn,6026.0,6003.0
+two anomalies,20,knn,7038.0,7000.0
+two anomalies,21,knn,3474.0,3432.0
+two anomalies,21,knn,4027.0,3997.0
+two anomalies,21,knn,5034.0,4998.0
+two anomalies,21,knn,6024.0,6000.0
+two anomalies,21,knn,7039.0,7000.0
+two anomalies,22,knn,4029.0,4000.0
+two anomalies,22,knn,5035.0,5004.0
+two anomalies,22,knn,6039.0,6000.0
+two anomalies,22,knn,7047.0,7000.0
+two anomalies,23,knn,4034.0,4000.0
+two anomalies,23,knn,5027.0,4990.0
+two anomalies,23,knn,6022.0,6003.0
+two anomalies,23,knn,7034.0,7001.0
+two anomalies,24,knn,4030.0,4000.0
+two anomalies,24,knn,5037.0,5000.0
+two anomalies,24,knn,6020.0,5996.0
+two anomalies,24,knn,7030.0,7000.0
+two anomalies,25,knn,4020.0,4000.0
+two anomalies,25,knn,5047.0,5007.0
+two anomalies,25,knn,6030.0,6002.0
+two anomalies,25,knn,7033.0,7000.0
+two anomalies,26,knn,4030.0,4000.0
+two anomalies,26,knn,5038.0,5000.0
+two anomalies,26,knn,6035.0,6009.0
+two anomalies,26,knn,7039.0,7001.0
+two anomalies,27,knn,4025.0,4000.0
+two anomalies,27,knn,5036.0,5000.0
+two anomalies,27,knn,6020.0,6000.0
+two anomalies,27,knn,7040.0,6997.0
+two anomalies,28,knn,4021.0,3993.0
+two anomalies,28,knn,5022.0,4973.0
+two anomalies,28,knn,6026.0,6000.0
+two anomalies,28,knn,7041.0,7000.0
+two anomalies,29,knn,4031.0,4001.0
+two anomalies,29,knn,5033.0,5000.0
+two anomalies,29,knn,6026.0,6004.0
+two anomalies,29,knn,7036.0,7000.0
+drift over 500,0,knn,2394.0,2267.0
+drift over 500,1,knn,2482.0,2247.0
+drift over 500,2,knn,2442.0,2335.0
+drift over 500,3,knn,2354.0,2318.0
+drift over 500,3,knn,2510.0,2472.0
+drift over 500,4,knn,2504.0,2311.0
+drift over 500,5,knn,2435.0,2253.0
+drift over 500,6,knn,2415.0,2373.0
+drift over 500,7,knn,2264.0,2239.0
+drift over 500,8,knn,2352.0,2203.0
+drift over 500,9,knn,2419.0,2282.0
+drift over 500,10,knn,2387.0,2141.0
+drift over 500,11,knn,2410.0,2357.0
+drift over 500,12,knn,2371.0,2281.0
+drift over 500,13,knn,2490.0,2370.0
+drift over 500,14,knn,2398.0,2247.0
+drift over 500,15,knn,2349.0,2240.0
+drift over 500,16,knn,2461.0,2196.0
+drift over 500,17,knn,2471.0,2251.0
+drift over 500,18,knn,2303.0,2273.0
+drift over 500,19,knn,2512.0,2297.0
+drift over 500,20,knn,2408.0,2280.0
+drift over 500,21,knn,2495.0,2319.0
+drift over 500,22,knn,2512.0,2381.0
+drift over 500,23,knn,2363.0,2259.0
+drift over 500,24,knn,2469.0,2233.0
+drift over 500,25,knn,2246.0,2231.0
+drift over 500,25,knn,2697.0,2427.0
+drift over 500,26,knn,2475.0,2344.0
+drift over 500,27,knn,2377.0,2244.0
+drift over 500,28,knn,2376.0,2182.0
+drift over 500,28,knn,2522.0,2439.0
+drift over 500,29,knn,2401.0,2207.0
+drift over 500,29,knn,2506.0,2364.0
+drift over 2000,0,knn,,
+drift over 2000,1,knn,,
+drift over 2000,2,knn,,
+drift over 2000,3,knn,,
+drift over 2000,4,knn,,
+drift over 2000,5,knn,,
+drift over 2000,6,knn,,
+drift over 2000,7,knn,,
+drift over 2000,8,knn,,
+drift over 2000,9,knn,,
+drift over 2000,10,knn,,
+drift over 2000,11,knn,,
+drift over 2000,12,knn,,
+drift over 2000,13,knn,,
+drift over 2000,14,knn,,
+drift over 2000,15,knn,,
+drift over 2000,16,knn,2918.0,2908.0
+drift over 2000,17,knn,,
+drift over 2000,18,knn,,
+drift over 2000,19,knn,,
+drift over 2000,20,knn,,
+drift over 2000,21,knn,3468.0,3432.0
+drift over 2000,22,knn,,
+drift over 2000,23,knn,,
+drift over 2000,24,knn,,
+drift over 2000,25,knn,,
+drift over 2000,26,knn,,
+drift over 2000,27,knn,,
+drift over 2000,28,knn,,
+drift over 2000,29,knn,,

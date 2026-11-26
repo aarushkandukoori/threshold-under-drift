@@ -1,0 +1,31 @@
+policy,stream,runs,runs_with_raise,raises,runs_raised_after_anomaly,raises_after_anomaly,stale_confirmations,alert_after_end_min,alert_after_end_median,alert_after_end_max,age_min,age_median,age_max,alarms_from_anomaly_share_median,alarms_from_anomaly_share_min,checked_share_anomaly_alarms_median,checked_share_after_alarms_median,labels_from_anomaly_share_median,fp_labels_from_anomaly,est_median,true_fa_window_median,raises_with_after_anomaly_evidence_only,est_after_anomaly_only_max,est_after_anomaly_only_missing,proposal_window_from_anomaly_median,cap_jump_median
+raise on confirmed false alarms,no shift,190,18,18,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 100",no shift,190,70,89,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 200",no shift,190,57,70,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 400",no shift,190,29,32,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, since last change",no shift,190,18,18,,,,,,,,,,,,,,,,,,,,,,
+raise on confirmed false alarms,sudden,190,190,1473,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 100",sudden,190,93,513,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 200",sudden,190,134,940,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 400",sudden,190,170,1178,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, since last change",sudden,190,190,1534,,,,,,,,,,,,,,,,,,,,,,
+raise on confirmed false alarms,sustained anomaly,190,96,119,96.0,119.0,0.0,14.0,241.0,802.0,6.0,140.0,2179.0,0.9053,0.0,0.1154,0.7778,0.6,0.0,0.0787,0.0417,11.0,0.084,26.0,0.518,0.0552
+"raise on confirmed false alarms, expire after 100",sustained anomaly,190,68,87,21.0,21.0,0.0,35.0,731.0,2650.0,6.0,24.0,55.0,0.0,0.0,0.1364,1.0,0.0,0.0,0.0941,0.086,16.0,0.1538,5.0,0.0,0.0266
+"raise on confirmed false alarms, expire after 200",sustained anomaly,190,70,85,35.0,35.0,0.0,14.0,67.0,2650.0,2.0,32.0,150.0,0.9048,0.0,0.1129,1.0,0.6667,0.0,0.0787,0.0625,11.0,0.0882,23.0,0.866,0.0614
+"raise on confirmed false alarms, expire after 400",sustained anomaly,190,74,86,51.0,59.0,0.0,42.0,144.0,2475.0,6.0,55.0,283.0,0.9341,0.0,0.1162,0.8333,0.6667,0.0,0.0821,0.0429,1.0,0.0771,32.0,0.712,0.0672
+"raise on confirmed false alarms, since last change",sustained anomaly,190,18,21,18.0,21.0,0.0,97.0,140.0,810.0,3.0,44.0,1042.0,0.0,0.0,,0.625,0.0,0.0,0.0808,0.0791,21.0,0.084,0.0,0.72,0.0337
+raise on confirmed false alarms,two anomalies,190,116,144,96.0,119.0,19.0,14.0,241.0,802.0,6.0,140.0,2179.0,0.9053,0.0,0.1154,0.7778,0.6,0.0,0.0787,0.0417,11.0,0.084,26.0,0.518,0.0552
+"raise on confirmed false alarms, expire after 100",two anomalies,190,68,86,13.0,13.0,0.0,35.0,279.0,771.0,8.0,22.0,55.0,0.0,0.0,0.1364,1.0,0.0,0.0,0.0921,0.0833,8.0,0.1392,5.0,0.442,0.0511
+"raise on confirmed false alarms, expire after 200",two anomalies,190,75,89,30.0,30.0,0.0,14.0,64.5,731.0,2.0,25.0,150.0,0.9375,0.0,0.1129,0.775,0.7143,0.0,0.0789,0.0612,6.0,0.0822,23.0,0.871,0.0706
+"raise on confirmed false alarms, expire after 400",two anomalies,190,91,104,50.0,58.0,0.0,42.0,135.5,269.0,6.0,53.5,267.0,0.9361,0.7708,0.1162,0.8333,0.6667,0.0,0.0822,0.0429,0.0,0.0722,32.0,0.729,0.0672
+"raise on confirmed false alarms, since last change",two anomalies,190,19,22,16.0,19.0,0.0,97.0,140.0,810.0,3.0,39.0,522.0,0.0,0.0,,0.625,0.0,0.0,0.08,0.0791,19.0,0.0816,0.0,0.72,0.0277
+raise on confirmed false alarms,drift over 500,190,190,1690,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 100",drift over 500,190,92,600,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 200",drift over 500,190,132,1136,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 400",drift over 500,190,170,1410,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, since last change",drift over 500,190,190,1708,,,,,,,,,,,,,,,,,,,,,,
+raise on confirmed false alarms,drift over 2000,190,190,1252,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 100",drift over 2000,190,95,521,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 200",drift over 2000,190,137,804,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, expire after 400",drift over 2000,190,170,1000,,,,,,,,,,,,,,,,,,,,,,
+"raise on confirmed false alarms, since last change",drift over 2000,190,190,1252,,,,,,,,,,,,,,,,,,,,,,
