@@ -235,8 +235,9 @@ walks through it (narration and captions).
   means. It never looks at labels. Over 30 seeds it flagged the sudden shift and both ends of every
   anomaly in every run, a median of 26 to 31 points after the change, and put the start within 27
   points of the true change (median 1). In the stream with no change it fired once in 60 runs (kNN
-  scores, seed 21). It flagged the 500-point drift partway through and the 2,000-point drift in 2 of
-  30 seeds (`results/summary_change_flags.csv`, from `src/check_change_test.py`).
+  scores, seed 21, at t = 3,474; the anomaly streams share that stretch of data and got the same
+  extra flag). It flagged the 500-point drift once or twice in 59 of 60 runs and the 2,000-point
+  drift in 2 of 30 seeds (`results/summary_change_flags.csv`, from `src/check_change_test.py`).
 - The version of 24 November is still there as `changes=None`. `run_feedback.py` uses it, so the
   first follow-up's numbers do not change (rerun after this change: the same CSVs, byte for byte).
 - New options: `explicit` (a ticket that closes with no explicit outcome is unknown and is never
