@@ -29,7 +29,7 @@ def shift_profile(kind, t=np.arange(T), ramp=1500):
     elif kind == "recurring":
         for start in (2000, 4000, 6000):              # on for 1,000 points, off for 1,000
             m[(t >= start) & (t < start + 1000)] = 1.0
-    elif kind in ("control", "sustained"):
+    elif kind in ("control", "sustained", "repeat"):
         pass
     else:
         raise ValueError(kind)
@@ -39,11 +39,14 @@ def shift_profile(kind, t=np.arange(T), ramp=1500):
 def synthetic(kind, seed, ramp=1500):
     """Gaussian normal data whose mean moves along one direction.
 
-    kind = control | sudden | gradual | recurring | sustained.
+    kind = control | sudden | gradual | recurring | sustained | repeat.
     `ramp` sets how many points the gradual move takes (only used when kind = gradual).
     'sustained' keeps normal data still and inserts a 1,000-point anomaly block at
     t = 4000..4999 that looks exactly like the sudden shift (same direction, same size),
     but is labeled anomalous. It tests whether an adaptive rule absorbs a sustained anomaly.
+    'repeat' is the same stream with a second, identical-looking block at t = 6000..6999
+    (the first 6,000 points match 'sustained' for the same seed). It tests whether a rule
+    that reacted to the first block misses more of the second.
     """
     rng = np.random.default_rng(seed)
     direction = rng.normal(size=D)
@@ -70,6 +73,11 @@ def synthetic(kind, seed, ramp=1500):
         sl = slice(*block)
         X[sl] = SHIFT * direction + rng.normal(size=(block[1] - block[0], D))
         y[sl] = 1
+    elif kind == "repeat":
+        block = (4000, 5000)
+        for lo, hi in (block, (6000, 7000)):
+            X[lo:hi] = SHIFT * direction + rng.normal(size=(hi - lo, D))
+            y[lo:hi] = 1
     return dict(fit=fit, cal=cal, X=X, y=y, m=m, kind=kind, block=block)
 
 
