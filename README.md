@@ -12,6 +12,11 @@ It is a small prototype, not a benchmark. A 4-page write-up of the first test is
 checked. See [the section below](#follow-up---label-delays-and-partial-feedback) and the 3-page
 write-up in [note/delays-and-partial-feedback.pdf](note/delays-and-partial-feedback.pdf).
 
+**Second follow-up (November 2026):** only explicit false-positive confirmations count, and where
+the false-alarm rule's raises right after an anomaly came from, with a fix. See
+[the section below](#second-follow-up---explicit-confirmations-and-stale-feedback) and the 3-page
+write-up in [note/explicit-confirmations-and-stale-feedback.pdf](note/explicit-confirmations-and-stale-feedback.pdf).
+
 ![Recover fast vs absorb a sustained anomaly](results/fig3_recover_vs_absorb.png)
 
 ## Setup
@@ -144,7 +149,7 @@ in `src/summarize_feedback.py`.
 |---|---|---|
 | every label returns | every point | the confirmed-normal rule above (last 500 confirmed normals), with a delay per point. A best case |
 | no ticket = normal | checked alerts | a point counts as normal once the median delay passes with no incident ticket for it. This is the confirmed-normal rule fed with real tickets |
-| raise on confirmed false alarms | checked alerts | threshold = the lower of the rolling-500 proposal and a cap. The cap starts at the fixed threshold. It rises to the proposal only when a checked alert comes back as a false positive and the checked alerts from the 500 points before it put the false-alarm rate above 3x the budget (alarms x share of returned labels that were false). Silence never raises it, and the threshold can always come down |
+| raise on confirmed false alarms | checked alerts | threshold = the lower of the rolling-500 proposal and a cap. The cap starts at the fixed threshold. It rises to the proposal only when a checked alert comes back as a false positive and the checked alerts from the 500 points before it put the false-alarm rate above 3x the budget (alarms x share of returned labels that were false). Silence never raises it, and the threshold can always come down. This is the version of 24 November; the second follow-up changes which points the estimate uses |
 | roll back on confirmed incidents | checked alerts | follows rolling-500. When 8 of the last 10 returned labels are confirmed incidents, it drops back to the lowest threshold at which one of them fired, and holds until fewer than 5 of the last 10 are incidents |
 
 These settings were set by hand. The false-alarm rule was adjusted on trial runs with 4 of the 10
@@ -196,12 +201,132 @@ What it shows:
 
 - The false-alarm rule lets false alarms climb to about 3x the budget before it moves. On the slow
   drift it ran at about 5% false alarms even with short delays, against 2.5% for rolling-500.
-- Its false-alarm estimate treats checked alerts as a fair sample of all alarms. Checks run out
-  during the sustained anomaly, so right after it the returned labels over-count false alarms and the
-  cap goes up: in 96 of the 190 runs (4 of 10 seeds at the reference setting, 1 of 10 with every
-  alert checked; column `n_raised` in `results/feedback_runs.csv`). The cap never comes back down, so
-  a second anomaly like the first would likely be missed more. That case is not tested here.
+- Right after the sustained anomaly its cap went up in 96 of the 190 runs (4 of 10 seeds at the
+  reference setting, 1 of 10 with every alert checked; column `n_raised` in
+  `results/feedback_runs.csv`), and the cap never comes back down. The second follow-up below traces
+  where those raises came from, tests a second anomaly and fixes the estimate.
 - Labels are always right, delays do not depend on the alert, and checks are first come, first served.
+
+## Second follow-up - explicit confirmations and stale feedback
+
+Two checks on the rule that raises the threshold only on confirmed false alarms. Code in
+`src/feedback.py`, runs in `src/run_confirmations.py`, tables and figures in
+`src/summarize_confirmations.py`. Same frozen detectors, synthetic streams and feedback model as
+above, plus a stream with two identical anomalies (t = 4,000 to 4,999 and 6,000 to 6,999; the
+first 6,000 points match the sustained-anomaly stream). A 3-page write-up is in
+[note/explicit-confirmations-and-stale-feedback.pdf](note/explicit-confirmations-and-stale-feedback.pdf).
+
+[![Demo video of the explorer page](docs/explicit-confirmations-demo-preview.gif)](https://aarushkandukoori.github.io/threshold-under-drift/video.html)
+
+A [small explorer page](https://aarushkandukoori.github.io/threshold-under-drift/) (built from the
+saved results by `src/make_explorer.py`) lets you change the share of confirmed false positives and
+compare the two versions of the rule. The 65-second [demo video](https://aarushkandukoori.github.io/threshold-under-drift/video.html)
+walks through it (narration and captions).
+
+**What changed in the code**
+
+- `raise_on_false_alarms` now builds its false-alarm estimate only from alarms and returned labels
+  since the last change flagged by a new score-only test, `flag_changes`, and it drops confirmations
+  for points before that change. Until now it always used the 500 points before the confirmed false
+  positive, even when those points straddled a change.
+- `flag_changes` compares the mean of the last 50 scores with the mean of up to 500 scores before
+  them, never reaching back past the last change. It flags a change when the two differ by more than
+  6 standard errors, then puts the start of the change at the split that best separates the two
+  means. It never looks at labels. Over 30 seeds it flagged the sudden shift and both ends of every
+  anomaly in every run, a median of 26 to 31 points after the change, and put the start within 27
+  points of the true change (median 1). In the stream with no change it fired once in 60 runs (kNN
+  scores, seed 21). It flagged the 500-point drift partway through and the 2,000-point drift in 2 of
+  30 seeds (`results/summary_change_flags.csv`, from `src/check_change_test.py`).
+- The version of 24 November is still there as `changes=None`. `run_feedback.py` uses it, so the
+  first follow-up's numbers do not change (rerun after this change: the same CSVs, byte for byte).
+- New options: `explicit` (a ticket that closes with no explicit outcome is unknown and is never
+  counted), `max_age` (expire confirmations older than a window; tested below, off by default) and
+  `log` (one record per raise of the cap).
+
+**Check 1 - only explicit false-positive confirmations count**
+
+A checked false positive is explicitly confirmed as one with probability f (0.1, 0.25, 0.5, 0.75
+or 1); otherwise its ticket just closes. A real issue that gets fixed also ends up closed, so a
+checked incident gets an incident record with probability g (1, or 0.5 when half of them just close).
+Rules either use explicit outcomes only, with a plain closure left as unknown, or read every closure
+without an incident record as a false positive. Reference delay and capacity (median 100 points,
+heavy-tailed, 5 checks per 100 points), 10 seeds; `results/summary_explicit.csv`.
+
+![Explicit confirmations only](results/fig12_explicit_only.png)
+
+- With explicit confirmations only, the false-alarm rule (both versions) missed 62% of the sustained
+  anomaly at every f and g, the same as the fixed threshold.
+- Reading every plain closure as a false positive brings the absorption back as soon as real issues
+  can close without a record: about 90% missed at g = 0.5, close to treating no ticket as normal.
+- Fewer confirmations cost recovery time. The new version recovered from a real shift in 424 points
+  with every false positive confirmed, 490 with half, 817 with a quarter and about 2,100 with a tenth
+  (false alarms in the first 500 points after the shift: 15.9%, 23.3%, 33.3% and 38.0%; fixed 38.0%).
+- With g = 0.5 the 24 November estimate also missed far more of a second anomaly (up to 91% at
+  f = 1). The new version stayed at 61% to 64% (fixed 61%).
+
+**Check 2 - where the raises right after the anomaly came from**
+
+Every raise of the cap is logged (`results/raise_log.csv`) with the age of the confirmation behind
+it, the part of the stream its alert came from, and how much of the estimate's evidence came from an
+earlier part. Summary in `results/summary_raises.csv`.
+
+![What the raises were made of](results/fig9_raise_evidence.png)
+
+- None of the 119 raises right after the anomaly (in 96 of 190 runs) was triggered by a confirmation
+  from an earlier part of the stream. Each confirmation was for an alert 14 to 802 points after the
+  anomaly ended; it had taken 6 to 2,179 points to come back (median 140).
+- The earlier part got in through the evidence. The 500-point window still held the anomaly: a median
+  91% of the alarms the estimate counted were the anomaly's own alarms, and only about 12% of those
+  had been checked, against about 78% of the alarms after it. So the false-positive share of the few
+  new labels was applied to hundreds of anomaly alarms (estimate median 7.9%, real false-alarm rate in
+  the window median 4.2%).
+- With evidence from after the anomaly only, 108 of the 119 raises would not have happened. The
+  other 11 were all in seed 8, where false alarms on normal points in those windows really were 7% to 8%.
+- Stale confirmations do matter when a second anomaly follows. In the two-anomaly stream, 19 of those
+  raises came from confirmations of points between the anomalies that arrived after the second one
+  had started.
+
+**Fixes tested** (`results/summary_fix_ref.csv`, `results/summary_fix_settings.csv`)
+
+![Fixes side by side](results/fig10_fixes.png)
+
+| Version of the false-alarm rule | Runs with a raise right after the anomaly (of 190) | Runs with a raise, no anomaly (of 190) | Second anomaly missed | Points to recover | Recall right after the anomaly |
+|---|---|---|---|---|---|
+| (fixed threshold) | - | - | 61% | never | 0.82 |
+| 24 November | 96 | 18 | 75% ± 11 | 416 ± 45 | 0.78 |
+| expire after 100 points | 21 | 70 | 63% ± 5 | never in 8 of 10 seeds | 0.81 |
+| expire after 200 points | 35 | 57 | 75% ± 10 | 487 ± 102 | 0.75 |
+| expire after 400 points | 51 | 29 | 73% ± 11 | 407 ± 44 | 0.75 |
+| since last change (new default) | 18 | 18 | 63% ± 4 | 424 ± 41 | 0.82 |
+
+The first two number columns count runs over all 19 delay and capacity settings x 10 seeds. The
+last three are at the reference setting, mean over 10 seeds (± is a 95% interval). "Recall right
+after the anomaly" = share of the point anomalies in the 1,000 points after it that raised an alarm.
+
+- Expiring old confirmations did not fix it. Short windows make the estimate noisy, so the cap went
+  up during normal running instead (57 to 70 runs of 190), and with 100 points the rule mostly never
+  recovered from a real shift. With 400 points it still raised right after the anomaly in 51 runs.
+- Counting only evidence since the last flagged change cut the runs with a raise right after the
+  anomaly from 96 to 18 of 190. All 18 are seed 8, the same seed where the rule raises in the stream
+  with no anomaly (18 of 190 runs). The second anomaly was missed at exactly the fixed threshold's rate
+  in 174 of 190 runs (24 November version: 94); the other 16 are seed 8, where the cap had gone up on
+  those real false alarms and stayed up.
+- Recovery from a real shift was about the same at the reference setting (424 vs 416 points) and
+  within 40 points at 14 of the 19 settings. It was slower when labels are scarce: 1,086 vs 744
+  points with 1 check per 100 points, 626 vs 420 with 2, and 565 vs 475, 636 vs 496 and 986 vs 895
+  at median delays of 400 (heavy-tailed), 800 (heavy-tailed) and 800 (steady). The estimate now waits
+  for 5 labels from after the change, where before labels from before the change counted toward those 5.
+- [Figure 11](results/fig11_two_anomalies_seed5.png) shows both versions over time on one seed.
+  kNN and 20 fresh seeds (10 to 29, reference setting) give the same picture (`summary_fix_ref.csv`,
+  `summary_fresh.csv`): on the fresh seeds, runs with a raise right after the anomaly went from 6 of
+  20 to 0 of 20 with either detector.
+
+**Settings.** The change test's settings (50 recent points, 6 standard errors, 100 to 500 reference
+points) were picked from the score scale before any run. Two things changed after trial runs on
+seeds 0 to 3: the spread now comes from the reference scores (the first version flagged extra
+changes in kNN scores after the shift), and the estimate now starts where the change began instead of
+where it was flagged (starting at the flag dropped the first checks after a shift and slowed recovery
+on seed 0). Seeds 5 and 7 were run once to test the code. Nothing else was tuned. Every seed is reported.
 
 ## Run it
 
@@ -211,17 +336,25 @@ pip install -r requirements.txt
 python3 -m pytest -q tests
 ```
 
-The first test runs in about 2 minutes on a laptop CPU; the feedback sweep takes a few more minutes
-with 4 worker processes (set `WORKERS` to change that). Runs are seeded, so repeat runs give the same CSVs.
+The first test runs in about 2 minutes on a laptop CPU; the feedback sweep and each part of the
+second follow-up take a few more minutes with 3 to 4 worker processes (set `WORKERS` to change that).
+Runs are seeded, so repeat runs give the same CSVs.
 
-Files: `src/streams.py` (data), `src/detectors.py`, `src/thresholds.py` (score-only rules and the
+Files - `src/streams.py` (data), `src/detectors.py`, `src/thresholds.py` (score-only rules and the
 confirmed-normal rule), `src/feedback.py` (delays, checks and the feedback rules), `src/metrics.py`,
 `src/run_all.py` and `src/summarize.py` (first test), `src/run_feedback.py` and
-`src/summarize_feedback.py` (follow-up). Tests check that every rule is past-only (changing future
-scores or labels never changes a past alarm), that the fixed rule hits its budget on i.i.d. scores,
-that the confirmed-normal rule does not absorb a labeled block, that flipping the true label of a
-point nobody checked changes nothing, that silence never raises the false-alarm rule's threshold,
-that labels are never used before they arrive, and that checks stay within capacity.
+`src/summarize_feedback.py` (follow-up), `src/run_confirmations.py`,
+`src/summarize_confirmations.py`, `src/check_change_test.py` and `src/make_explorer.py` (second
+follow-up; the explorer page and demo video are in `docs/`). Tests check that every rule is past-only
+(changing future scores or labels never changes a past alarm), that the fixed rule hits its budget on
+i.i.d. scores, that the confirmed-normal rule does not absorb a labeled block, that flipping the true
+label of a point nobody checked changes nothing, that silence never raises the false-alarm rule's
+threshold, that labels are never used before they arrive, and that checks stay within capacity. The
+second follow-up adds tests that `changes=None` matches a frozen copy of the 24 November rule, that
+flipping the true label of a ticket that closed with no explicit outcome changes nothing, that the
+change test is past-only, finds a step within 100 points (start within 10) and stays quiet on 20,000
+points with no change, that the new estimate does not raise after the sustained anomaly in seed 5
+while the old one does, and that it still recovers from a real shift.
 
 ## Limits
 
@@ -231,6 +364,10 @@ that labels are never used before they arrive, and that checks stay within capac
 - The gas anomalies are a different gas, so "anomaly" there means "a gas the detector never saw".
 - The confirmed-normal rule assumes every label comes back. The follow-up section tests partial,
   delayed feedback.
+- Second follow-up: the false-alarm rule's cap still never comes back down, so a raise on real false
+  alarms (seed 8) stays and a later anomaly is missed more. Labels and explicit outcomes are always
+  right, whether a ticket gets an explicit outcome does not depend on the alert, and the change test
+  was only tried on these streams, where changes are clean steps or ramps.
 
 ## Credit
 
