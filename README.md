@@ -273,9 +273,9 @@ earlier part. Summary in `results/summary_raises.csv`.
 
 ![What the raises were made of](results/fig9_raise_evidence.png)
 
-- None of the 119 raises right after the anomaly (in 96 of 190 runs) was triggered by a confirmation
-  from an earlier part of the stream. Each confirmation was for an alert 14 to 802 points after the
-  anomaly ended; it had taken 6 to 2,179 points to come back (median 140).
+- Every one of the 119 raises right after the anomaly (in 96 of 190 runs) was triggered by a
+  confirmation from after the anomaly. Each was for an alert 14 to 802 points after the anomaly
+  ended; it had taken 6 to 2,179 points to come back (median 140).
 - The earlier part got in through the evidence. The 500-point window still held the anomaly: a median
   91% of the alarms the estimate counted were the anomaly's own alarms, and only about 12% of those
   had been checked, against about 78% of the alarms after it. So the false-positive share of the few

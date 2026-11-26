@@ -268,14 +268,15 @@ def raise_on_false_alarms(cal, s, y, delay, capacity, window=WINDOW, recent=RECE
                                 after a sustained anomaly those points are mostly the anomaly,
                                 whose many alarms were rarely checked, so the share of false
                                 positives among the few new labels got applied to the
-                                anomaly's alarms and the cap went up (diagnose_raises.py).
+                                anomaly's alarms and the cap went up (see run_confirmations.py).
       max_age=W                 also drop confirmations for alerts more than W points old,
                                 and count only the last W points (an alternative fix that
                                 was tested; off by default).
     explicit: None = every checked alert closes with its true outcome (the first two tests).
     Otherwise a boolean array from draw_outcomes(); a ticket with explicit[i] False closed
     ambiguously and is never counted, as a false positive or as an incident.
-    log: a list; one dict per raise is appended (for diagnose_raises.py)."""
+    log: a list; one dict per raise is appended (run_confirmations.py writes them to
+    results/raise_log.csv)."""
     T = len(s)
     prop = rolling_threshold(cal, s, window)
     if isinstance(changes, str):

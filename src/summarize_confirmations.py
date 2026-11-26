@@ -188,7 +188,7 @@ def figures(fx, rz, ex, ref, exs):
     a.set_ylabel("Age of its confirmation\nwhen it arrived (points)")
     a.set_xlim(left=0)
     a.set_ylim(bottom=0)
-    a.set_title("Every confirmation: a point after the anomaly", fontsize=8.5)
+    a.set_title("Every confirmation - for a point after the anomaly", fontsize=8.5)
     a = ax[1]
     x = np.arange(len(after))
     same = after.est_same_part.fillna(0.0)
@@ -201,7 +201,7 @@ def figures(fx, rz, ex, ref, exs):
     a.set_xticks([])
     a.set_xlabel(f"Each raise right after the anomaly ({len(after)} raises, sorted)")
     a.set_ylabel("False-alarm estimate (%)")
-    a.set_title("Its estimate: mostly the anomaly's own alarms", fontsize=8.5)
+    a.set_title("Its estimate - mostly the anomaly's own alarms", fontsize=8.5)
     a.legend(fontsize=6.8, frameon=False, loc="upper left")
     a.set_ylim(0, max(13.5, after.est.max() * 100 + 2))
     fig.tight_layout()
